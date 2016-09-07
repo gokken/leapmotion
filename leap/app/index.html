@@ -65,6 +65,11 @@
             $(frame.gestures).each(function() {
               typeValue.html(this.type);
               stateValue.html(this.state);
+              if(this.type=="circle"&&this.state=="stop"){
+                  $('#movie').toggle();
+              }else if(this.type=="swipe"){
+                  $('#movie').hide();
+              }
             });
           });
         });
